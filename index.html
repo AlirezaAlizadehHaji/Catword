@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catword</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page">
+        <header class="header">
+            <h1 class="title">Catword</h1>
+            <p class="subtitle">Let your cat type your password</p>
+        </header>
+
+        <div class="password-section">
+            <div class="password-display" id="password-display">
+                <span id="password-text" class="password-text"></span><span class="cursor" id="cursor"></span>
+            </div>
+            <div class="password-actions">
+                <button id="copy-btn" class="btn btn-copy hidden">Copy</button>
+                <span id="copy-toast" class="copy-toast hidden">Copied!</span>
+            </div>
+        </div>
+
+        <div class="keyboard-stage-outer">
+            <div class="keyboard-stage" id="keyboard-stage">
+                <div class="cat" id="cat">
+                    <svg width="88" height="68" viewBox="0 0 88 68" overflow="visible" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8,46 C2,36 4,20 13,12" stroke="#c87020" stroke-width="6" fill="none" stroke-linecap="round"/>
+                        <ellipse cx="42" cy="45" rx="26" ry="15" fill="#e89030"/>
+                        <circle cx="64" cy="30" r="18" fill="#e89030"/>
+                        <polygon points="52,16 56,4 66,14" fill="#e89030"/>
+                        <polygon points="63,14 68,3 76,13" fill="#e89030"/>
+                        <polygon points="54,15 57,8 64,14" fill="#f8c0cc"/>
+                        <polygon points="65,13 69,7 74,13" fill="#f8c0cc"/>
+                        <ellipse cx="70" cy="28" rx="4" ry="5" fill="#1a1208"/>
+                        <ellipse cx="71.5" cy="26" rx="1.5" ry="1.5" fill="white"/>
+                        <polygon points="76,34 79,37 73,37" fill="#f8a0b8"/>
+                        <line x1="73" y1="35" x2="59" y2="32" stroke="#c87020" stroke-width="1.2" opacity="0.55"/>
+                        <line x1="73" y1="36" x2="59" y2="38" stroke="#c87020" stroke-width="1.2" opacity="0.55"/>
+                        <line x1="79" y1="35" x2="87" y2="32" stroke="#c87020" stroke-width="1.2" opacity="0.55"/>
+                        <line x1="79" y1="36" x2="87" y2="38" stroke="#c87020" stroke-width="1.2" opacity="0.55"/>
+                        <rect x="22" y="56" width="9" height="14" rx="4.5" fill="#c87020" class="leg"/>
+                        <rect x="34" y="57" width="9" height="13" rx="4.5" fill="#c87020" class="leg"/>
+                        <rect x="52" y="56" width="9" height="14" rx="4.5" fill="#e89030" class="leg"/>
+                        <rect x="63" y="56" width="9" height="14" rx="4.5" fill="#e89030" class="leg"/>
+                        <path d="M28,38 Q29,52 28,56" stroke="#c87020" stroke-width="2" fill="none" opacity="0.4"/>
+                        <path d="M37,36 Q38,52 37,56" stroke="#c87020" stroke-width="2" fill="none" opacity="0.4"/>
+                        <path d="M46,36 Q47,52 46,56" stroke="#c87020" stroke-width="2" fill="none" opacity="0.4"/>
+                    </svg>
+                </div>
+                <div class="keyboard" id="keyboard"></div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="generate-btn" class="btn btn-generate">Generate Password</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
